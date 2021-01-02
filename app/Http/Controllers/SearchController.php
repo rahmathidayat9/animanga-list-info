@@ -20,8 +20,8 @@ class SearchController extends Controller
     		'q' => 'required',
     	]);
 
-    	$searchAnimeResult = Http::get($this->api."anime?q=".request('q')."&limit=12");
+    	$animeSearchResult = Http::get($this->api."anime?q=".request('q')."&limit=12");
 
-    	return $searchAnimeResult;
+        return view('anime.anime-search-result',['animeSearchResult' => $animeSearchResult]);
     }
 }

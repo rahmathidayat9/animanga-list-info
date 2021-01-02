@@ -88,7 +88,7 @@
                         <h5>Contact Me On</h5>
                     </div>
                     <div class="card">
-                        <div class="card-body"><a href="javascript:void(0)" onclick="window.open('https://web.facebook.com/frederica.san.50')" class="btn btn-primary"> <i class="fa fa-facebook fa-2x"></i></a></div>
+                        <div class="card-body"><a href="javascript:void(0)" onclick="window.open('https://web.facebook.com/profile.php?id=100050205264012')" class="btn btn-primary"> <i class="fa fa-facebook fa-2x"></i></a></div>
                     </div>
                 </div>
             </div>

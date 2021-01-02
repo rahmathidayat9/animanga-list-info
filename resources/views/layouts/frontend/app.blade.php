@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="/">
+                        <a href="{{ route('home') }}">
                             <img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
                         </a>
                     </div>
@@ -46,8 +46,8 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="/">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                                <!-- <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
                                         <li><a href="./anime-details.html">Anime Details</a></li>
@@ -56,9 +56,9 @@
                                         <li><a href="./signup.html">Sign Up</a></li>
                                         <li><a href="./login.html">Login</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="./blog.html">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                </li> -->
+                                <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -66,7 +66,6 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="./login.html"><span class="icon_profile"></span></a>
                     </div>
                 </div>
             </div>
@@ -84,16 +83,15 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="/"><img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="/">Homepage</a></li>
-                        <li><a href="./categories.html">Categories</a></li>
-                        <li><a href="./blog.html">Our Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
+                        <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>

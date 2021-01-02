@@ -21,7 +21,8 @@ use App\Http\Controllers\SearchController;
 
 
 Route::get('/',[HomeController::class,'index']);
-Route::get('/home',[HomeController::class,'index']);
+Route::get('/home',[HomeController::class,'index'])->name('home');
+Route::view('/about','home.about')->name('about');
 
 Route::view('/anime/categories','anime.categories');
 Route::get('/anime/{id}',[AnimeController::class,'show'])->name('anime.show');
