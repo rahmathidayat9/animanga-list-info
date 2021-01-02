@@ -29,7 +29,7 @@
                                     <div class="view"><i class="fa fa-star"></i> {{ $aSR['score'] }}</div>
                                 </div>
                                 <div class="product__item__text">
-                                    <h5><a href="{{ route('anime.show',encrypt($aSR['mal_id'])) }}">{{ $aSR['title'] }}</a></h5>
+                                    <h5><a href="/anime/{{ encrypt($aSR['mal_id'] }}">{{ $aSR['title'] }}</a></h5>
                                 </div>
                             </div>
                         </div>

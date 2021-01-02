@@ -69,7 +69,7 @@
                                 data-setbg="{{ $tS['image_url'] }}">
                                 <div class="ep">{{ $tS['type'] }}</div>
                                 <div class="view"><i class="fa fa-star"></i> {{ $tS['score'] }}</div>
-                                <h5><a href="{{ route('anime.show',encrypt($tS['mal_id'])) }}">{{ $tS['title'] }}</a></h5>
+                                <h5><a href="/anime/{{ encrypt($aSR['mal_id'] }}">{{ $tS['title'] }}</a></h5>
                             </div>
                             @endforeach
 

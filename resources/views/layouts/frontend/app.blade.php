@@ -44,7 +44,7 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
                                 <!-- <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
@@ -55,7 +55,7 @@
                                         <li><a href="./login.html">Login</a></li>
                                     </ul>
                                 </li> -->
-                                <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
+                                <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="/about">About</a></li>
                                 <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
                                 <li class="{{ Request::is('group-chat') ? 'active' : '' }}"><a href="/group-chat">Group Chat</a></li>
                             </ul>
@@ -110,7 +110,7 @@
   <div class="search-model">
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-switch"><i class="fa fa-times-circle"></i></div>
-        <form class="search-model-form" action="{{ route('search.anime') }}" method="GET">
+        <form class="search-model-form" action="/search/anime" method="GET">
             <div class="input-group">
               <input type="text" id="search-input" name="q" class="form-control" placeholder="Search Anime">
               <div class="input-group-append">
