@@ -59,6 +59,7 @@
                                 </li> -->
                                 <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
                                 <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
+                                <li class="{{ Request::is('group-chat') ? 'active' : '' }}"><a href="/group-chat">Group Chat</a></li>
                             </ul>
                         </nav>
                     </div>
