@@ -15,12 +15,10 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/plyr.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
 </head>
@@ -66,7 +64,7 @@
                 </div>
                 <div class="col-lg-2">
                     <div class="header__right">
-                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="#" class="search-switch"><span class="fa fa-search"></span></a>
                     </div>
                 </div>
             </div>
@@ -125,13 +123,13 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery-3.3.1.min.js"></script>
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/player.js"></script>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.nice-select.min.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/mixitup.min.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/owl.carousel.min.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/main.js"></script>
 
 </body>
