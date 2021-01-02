@@ -15,8 +15,8 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/slicknav.min.css" type="text/css">
@@ -109,7 +109,7 @@
   <!-- Search model Begin -->
   <div class="search-model">
     <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-switch"><i class="icon_close"></i></div>
+        <div class="search-close-switch"><i class="fa fa-times-circle"></i></div>
         <form class="search-model-form" action="{{ route('search.anime') }}" method="GET">
             <div class="input-group">
               <input type="text" id="search-input" name="q" class="form-control" placeholder="Search Anime">
@@ -123,12 +123,8 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.nice-select.min.js"></script>
-<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/mixitup.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/main.js"></script>
 
