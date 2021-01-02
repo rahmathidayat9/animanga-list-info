@@ -50,7 +50,7 @@
                                     </li>
 
                                     <li><span>Date aired:</span> {{ $anime['aired']['string'] }}</li>
-                                    <li><span>Status:</span> Airing</li>
+                                    <li><span>Status:</span> {{ $anime['status'] }}</li>
                                     <li><span>Genre:</span> 
                                         @foreach($anime['genres'] as $genre)
                                             {{ $genre['name']."," }}
