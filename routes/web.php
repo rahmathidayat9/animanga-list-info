@@ -34,3 +34,5 @@ Route::view('/blog/details','blog.blog-details');
 
 Route::view('/login','auth.login');
 Route::view('/register','auth.register');
+
+Route::view('/group-chat','home.group-chat');
