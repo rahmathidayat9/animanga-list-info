@@ -15,14 +15,14 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
+                            <img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
+                    <a href="{{ route('home') }}"><img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -123,14 +123,14 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<script src="{{ asset('templates/frontend/anime-main') }}/js/jquery-3.3.1.min.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/player.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/jquery.nice-select.min.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/mixitup.min.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/owl.carousel.min.js"></script>
-<script src="{{ asset('templates/frontend/anime-main') }}/js/main.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/player.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.nice-select.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/mixitup.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/owl.carousel.min.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/main.js"></script>
 
 </body>
 </html>
