@@ -16,7 +16,7 @@
                     <div class="anime__details__title">
                         <h3>{{ $character['name'] }}</h3>
                     </div>
-                    <p>{!! nl2br($character['about']) !!}</p>
+                    <p>{{ nl2br($character['about']) }}</p>
                     </div>
                 </div>
             </div>
