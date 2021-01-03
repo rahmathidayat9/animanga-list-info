@@ -16,7 +16,11 @@
                     <div class="anime__details__title">
                         <h3>{{ $character['name'] }}</h3>
                     </div>
-                    <p>{!! nl2br(e($character['about'])) !!}</p>
+                    @php 
+                        $about = $character['about'];
+                        $showAbout = preg_replace( "/\r|\n/", "", $about) 
+                    @endphp
+                    <p>{!! $showAbout !!}</p>
                     </div>
                 </div>
             </div>
