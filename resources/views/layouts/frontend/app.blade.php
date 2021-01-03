@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="{{ route('home') }}">
+                        <a href="/">
                             <img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
                         </a>
                     </div>
@@ -82,13 +82,13 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="{{ route('home') }}"><img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
+                    <a href="/"><img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
                         <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
                         <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
                         <li class="{{ Request::is('group-chat') ? 'active' : '' }}"><a href="/group-chat">Group Chat</a></li>
