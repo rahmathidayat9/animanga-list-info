@@ -37,7 +37,7 @@
                         @endforeach
                     </div>
                     
-                    <p>{{ $anime['synopsis'] }}</p>
+                    <p>{!! $anime['synopsis'] !!}</p>
                     <div class="anime__details__widget">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
