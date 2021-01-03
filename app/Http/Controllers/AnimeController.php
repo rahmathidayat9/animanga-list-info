@@ -20,4 +20,11 @@ class AnimeController extends Controller
 
 		return view('anime.anime-details',['anime' => $anime]);
 	}
+	
+	public function characters($id)
+	{
+		$characters = Http::get($this->api."anime/".decrypt($id)."/characters_staff");
+
+		return view('anime.character',['' => $characters]);	
+	}
 }

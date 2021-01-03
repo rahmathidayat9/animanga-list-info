@@ -29,6 +29,8 @@ Route::get('/anime/{id}',[AnimeController::class,'show'])->name('anime.show');
 Route::get('/search/anime',[SearchController::class,'anime'])->name('search.anime');
 Route::view('/anime/watching','anime.anime-watching');
 
+Route::get('/anime/{id}/characters',[AnimeController::class,'characters']);
+
 Route::view('/blog','blog.blog-lists');
 Route::view('/blog/details','blog.blog-details');
 
