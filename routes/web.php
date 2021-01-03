@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\MangaController;
 use App\Http\Controllers\SearchController;
 
@@ -29,7 +30,10 @@ Route::get('/anime/{id}',[AnimeController::class,'show'])->name('anime.show');
 Route::get('/search/anime',[SearchController::class,'anime'])->name('search.anime');
 Route::view('/anime/watching','anime.anime-watching');
 
-Route::get('/anime/{id}/characters',[AnimeController::class,'characters']);
+Route::get('/characters/anime/{id}',[CharacterController::class,'index']);
+Route::get('/character/{id}',[CharacterController::class,'show']);
+
+Route::get('/genre',[GenreController::class,'index']);
 
 Route::view('/blog','blog.blog-lists');
 Route::view('/blog/details','blog.blog-details');

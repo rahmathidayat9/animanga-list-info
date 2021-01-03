@@ -69,7 +69,7 @@
                     </div>
                     
                     <div class="anime__details__btn">
-                    <a href="/anime/{{ encrypt($anime['mal_id']) }}/characters" class="watch-btn"><span>Caracter & Staff </span> <i
+                    <a href="/characters/anime/{{ encrypt($anime['mal_id']) }}" class="watch-btn"><span>Caracter & Staff </span> <i
                         class="fa fa-angle-right"></i></a>
                     </div>
                     </div>
@@ -84,16 +84,6 @@
                     </div>
                     <iframe width="700" height="450" src="{{ $anime['trailer_url'] }}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="anime__details__sidebar">
-                    <div class="section-title">
-                        <h5>Contact Me On</h5>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><a href="javascript:void(0)" onclick="window.open('https://web.facebook.com/profile.php?id=100050205264012')" class="btn btn-primary"> <i class="fa fa-facebook fa-2x"></i></a></div>
-                    </div>
                 </div>
             </div>
         </div>

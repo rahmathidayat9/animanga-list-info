@@ -48,7 +48,7 @@
                                         <div class="view"><i class="fa fa-star"></i> {{ $tA['score'] }}</div>
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="{{ route('anime.show',encrypt($tA['mal_id'])) }}">{{ $tA['title'] }}</a></h5>
+                                        <h5><a href="/anime/{{ encrypt($tA['mal_id']) }}">{{ $tA['title'] }}</a></h5>
                                     </div>
                                 </div>
                             </div>
