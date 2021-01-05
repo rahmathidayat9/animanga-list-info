@@ -9,6 +9,9 @@ use App\Http\Controllers\GenreController;
 use App\Http\Controllers\MangaController;
 use App\Http\Controllers\SearchController;
 
+// Auth
+use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +40,8 @@ Route::get('/character/{id}',[CharacterController::class,'show']);
 
 Route::get('/genre',[GenreController::class,'index']);
 Route::get('/genre/{id}',[GenreController::class,'showByGenre'])->name('genre.show-list');
+
+Route::get('/send',[RegisterController::class,'send']);
 
 Route::view('/blog','blog.blog-lists');
 Route::view('/blog/details','blog.blog-details');
