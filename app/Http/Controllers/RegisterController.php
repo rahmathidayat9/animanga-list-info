@@ -11,6 +11,6 @@ class RegisterController extends Controller
     public function send(Request $request)
     {
         Mail::to('yeageristlima@gmail.com')
-        ->send('Hi Please Confirm Your Account','This Email From App Using');
+        ->send('Hi Please Confirm Your Account');
     }
 }
