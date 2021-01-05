@@ -20,4 +20,11 @@ class AnimeController extends Controller
 
 		return view('anime.anime-details',['anime' => $anime]);
 	}
+
+	public function detail($id)
+	{
+		$anime = Http::get($this->api."anime/".$id);
+
+		return view('anime.anime-details',['anime' => $anime]);
+	}
 }

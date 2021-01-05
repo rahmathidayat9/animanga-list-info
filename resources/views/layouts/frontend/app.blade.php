@@ -45,6 +45,7 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
+                                <li class="{{ Request::is('genre') ? 'active' : '' }}"><a href="/genre">Genre</a></li>
                                 <!-- <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
@@ -89,6 +90,7 @@
                 <div class="footer__nav">
                     <ul>
                         <li class="{{ Request::is('home') ? 'active' : '' }}"><a href="/">Home</a></li>
+                        <li class="{{ Request::is('genre') ? 'active' : '' }}"><a href="/genre">Genre</a></li>
                         <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
                         <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="#">Contact</a></li>
                         <li class="{{ Request::is('group-chat') ? 'active' : '' }}"><a href="/group-chat">Group Chat</a></li>
@@ -127,6 +129,8 @@
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
 <script src="{{ secure_asset('templates/frontend/anime-main') }}/js/main.js"></script>
+@yield('js-plugins')
+@yield('js-script')
 
 </body>
 </html>

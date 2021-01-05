@@ -27,6 +27,8 @@ Route::view('/about','home.about')->name('about');
 
 Route::view('/anime/categories','anime.categories');
 Route::get('/anime/{id}',[AnimeController::class,'show'])->name('anime.show');
+Route::get('/anime-details/{id}',[AnimeController::class,'detail'])->name('anime.detail');
+
 Route::get('/search/anime',[SearchController::class,'anime'])->name('search.anime');
 Route::view('/anime/watching','anime.anime-watching');
 
@@ -34,6 +36,7 @@ Route::get('/characters/anime/{id}',[CharacterController::class,'index']);
 Route::get('/character/{id}',[CharacterController::class,'show']);
 
 Route::get('/genre',[GenreController::class,'index']);
+Route::get('/genre/{id}',[GenreController::class,'showByGenre'])->name('genre.show-list');
 
 Route::view('/blog','blog.blog-lists');
 Route::view('/blog/details','blog.blog-details');
