@@ -38,12 +38,6 @@
 @stop
 
 @section('content')
-<div id="overlay">
-  <div class="cv-spinner">
-    <span class="spinner"></span>
-  </div>
-</div>
-
     <!-- Product Section Begin -->
     <section class="product-page spad">
         <div class="container">
@@ -90,13 +84,19 @@
 </div>
 </section>
 <!-- Product Section End -->
+<div id="overlay">
+  <div class="cv-spinner">
+    <span class="spinner"></span>
+  </div>
+</div>
 @stop
 
 @section('js-script')
 <script type="text/javascript">
     $(document).ready(function(){
+        
         $(document).ajaxSend(function() {
-            $("#overlay").fadeIn(300);　
+            $("#overlay").fadeIn(500);　
         });
 
         $("#genre").change(function(){
