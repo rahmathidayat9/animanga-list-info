@@ -1,6 +1,10 @@
 @extends('layouts.frontend.app',[
     'title' => 'Genre List'
 ])
+@section('css-script')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/genre.css') }}">
+@stop
+
 @section('content')
     <!-- Product Section Begin -->
     <section class="product-page spad">
@@ -47,46 +51,14 @@
 </div>
 </div>
 </section>
+<div id="overlay">
+  <div class="cv-spinner">
+    <span class="spinner"></span>
+  </div>
+</div>
 <!-- Product Section End -->
 @stop
 
 @section('js-script')
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#genre").change(function(){
-            var id = $(this).val()
-            
-            $.ajax({
-                url: "https://api.jikan.moe/v3/genre/anime/"+id,
-                type: "GET",
-                success: function(response){
-                    console.log(response.mal_url.mal_id)
-                    $("#genre-title").html("Genre : "+response.mal_url.name)
-                    var anime = response.anime
-
-                    $("#anime-list").html("")
-
-                    $.each(anime,function(key, value){
-                        $("#anime-list").append(`
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="product__item">
-
-                                    <div class="product__item__pic set-bg" data-setbg="">
-                                        <img src="`+value.image_url+`" width="100%" style="height: 330px; object-fit: cover; object-position: center;">
-                                        <div class="ep">`+value.type+`</div>
-                                        <div class="view"><i class="fa fa-star"></i> `+value.score+`</div>
-                                    </div>
-                                    
-                                    <div class="product__item__text">
-                                        <h5><a href="/anime-details/`+value.mal_id+`">`+value.title+`</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        `)
-                    })
-                }
-            })
-        })
-    })
-</script>
+<script type="text/javascript" src="{{ asset('js/genre.js') }}"></script>
 @stop

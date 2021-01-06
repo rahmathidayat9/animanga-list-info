@@ -74,7 +74,7 @@ class GenreController extends Controller
     			'name' => 'Kids',
     		],
     		[
-    			'mal_id' => '15',
+    			'mal_id' => '16',
     			'name' => 'Magic',
     		],
     		[
