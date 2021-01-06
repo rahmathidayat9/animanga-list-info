@@ -2,7 +2,39 @@
     'title' => 'Genre List'
 ])
 @section('css-script')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/genre.css') }}">
+<style type="text/css">
+#overlay{   
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height:100%;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+.is-hide{
+  display:none;
+}
+</style>
 @stop
 
 @section('content')
@@ -60,5 +92,50 @@
 @stop
 
 @section('js-script')
-<script type="text/javascript" src="{{ asset('js/genre.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).ajaxSend(function() {
+            $("#overlay").fadeIn(300);　
+        });
+
+        $("#genre").change(function(){
+            var id = $(this).val()
+            
+            $.ajax({
+                url: "https://api.jikan.moe/v3/genre/anime/"+id,
+                type: "GET",
+                success: function(response){
+                  
+                  setTimeout(function(){
+                    $("#overlay").fadeOut(500);
+                  },500);
+
+                    $("#genre-title").html("Genre : "+response.mal_url.name)
+                    var anime = response.anime
+
+                    $("#anime-list").html("")
+
+                    $.each(anime,function(key, value){
+                        $("#anime-list").append(`
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+
+                                    <div class="product__item__pic set-bg" data-setbg="">
+                                        <img src="`+value.image_url+`" width="100%" style="height: 330px; object-fit: cover; object-position: center;">
+                                        <div class="ep">`+value.type+`</div>
+                                        <div class="view"><i class="fa fa-star"></i> `+value.score+`</div>
+                                    </div>
+                                    
+                                    <div class="product__item__text">
+                                        <h5><a href="/anime-details/`+value.mal_id+`">`+value.title+`</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    })
+                }
+            })
+        })
+    })
+</script>
 @stop
