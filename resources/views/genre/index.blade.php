@@ -38,6 +38,12 @@
 @stop
 
 @section('content')
+<div id="overlay">
+  <div class="cv-spinner">
+    <span class="spinner"></span>
+  </div>
+</div>
+
     <!-- Product Section Begin -->
     <section class="product-page spad">
         <div class="container">
@@ -83,11 +89,6 @@
 </div>
 </div>
 </section>
-<div id="overlay">
-  <div class="cv-spinner">
-    <span class="spinner"></span>
-  </div>
-</div>
 <!-- Product Section End -->
 @stop
 
