@@ -55,7 +55,7 @@
                                     <div class="product__page__filter">
                                         <p>Genre:</p>
                                         <select name="genre" id="genre">
-                                            <option value="">Select Genre</option>
+                                            <option value="0" disabled="">Select Genre</option>
                                             @foreach($genres as $genre)
                                             <option value="{{ $genre['mal_id'] }}">{{ $genre['name'] }}</option>
                                             @endforeach
