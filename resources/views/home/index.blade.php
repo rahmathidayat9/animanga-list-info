@@ -5,13 +5,13 @@
     <section class="hero">
         <div class="container">
             
-                <div class="hero__items set-bg" data-setbg="{{ asset('templates/frontend/anime-main') }}/img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="{{ asset('img/streaming') }}/sora-ginko.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
-                                <div class="label">Adventure</div>
-                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
-                                <p>After 30 days of travel across the world...</p>
+                                <div class="label">Simple Anime Info</div>
+                                <h2>Discover Our Anime List</h2>
+                                <p>Hello World ...</p>
                                 <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
@@ -34,9 +34,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
-                                <div class="btn__all">
+                                <!-- <div class="btn__all">
                                     <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row">
