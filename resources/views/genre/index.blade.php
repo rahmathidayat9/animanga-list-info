@@ -83,7 +83,7 @@
 </div>
 </div>
 </section>
-<!-- Product Section End -->
+
 <div id="overlay">
   <div class="cv-spinner">
     <span class="spinner"></span>
