@@ -128,7 +128,7 @@
                                     </div>
                                     
                                     <div class="product__item__text">
-                                        <h5><a href="/anime-details/`+value.mal_id+`">`+value.title+`</a></h5>
+                                        <h5><a href="/anime/{{ encrypt(`+value.mal_id+`) }}">`+value.title+`</a></h5>
                                     </div>
                                 </div>
                             </div>

@@ -15,18 +15,11 @@
     rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/elegant-icons@0.0.1-alpha.4/elegant-icons.css">
-
+    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" integrity="sha512-uHuCigcmv3ByTqBQQEwngXWk7E/NaPYP+CFglpkXPnRQbSubJmEENgh+itRDYbWV0fUZmUz7fD/+JDdeQFD5+A==" crossorigin="anonymous" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" integrity="sha512-heyoieAHmpAL3BdaQMsbIOhVvGb4+pl4aGCZqWzX/f1BChRArrBy/XUZDHW9WVi5p6pf92pX4yjkfmdaIYa2QQ==" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
     @yield('css-script')
 </head>
@@ -133,12 +126,9 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<!-- Bootstrap Js -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" integrity="sha512-AmJ0T6lpw/ZQtCleMyfbraDy8AGQ9tWaB/PmRkXdKxH9Kvo0oTuW6+2hTEQ89mHkFIO/LpColEe3+QE+FJtgIg==" crossorigin="anonymous"></script>
-
+<script src="{{ asset('templates/frontend/anime-main') }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ asset('templates/frontend/anime-main') }}/js/bootstrap.min.js"></script>
+<script src="{{ asset('templates/frontend/anime-main') }}/js/jquery.slicknav.js"></script>
 <script src="{{ asset('templates/frontend/anime-main') }}/js/main.js"></script>
 @yield('js-plugins')
 @yield('js-script')

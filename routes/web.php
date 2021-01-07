@@ -45,3 +45,14 @@ Route::view('/login','auth.login');
 Route::view('/register','auth.register');
 
 Route::view('/group-chat','home.group-chat');
+
+Route::view('login','auth.login')->name('login');
+
+Route::middleware(['auth'])->namespace('Admin')->group(function(){
+
+	Route::resource('admin/banner','BannerController');
+	Route::resource('admin/chat','ChatController');
+	Route::resource('admin/role','RoleController');
+	Route::resource('admin/user','UserController');
+
+});
