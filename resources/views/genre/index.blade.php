@@ -101,7 +101,7 @@
 
         $("#genre").change(function(){
 
-            if (this.val()==0) {
+            if ($(this).val()==0) {
               document.location.href="/genre"
             }
 
