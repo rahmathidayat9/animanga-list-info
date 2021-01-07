@@ -54,8 +54,8 @@
                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                     <div class="product__page__filter">
                                         <p>Genre:</p>
-                                        <select name="genre" id="genre">
-                                            <option value="0" disabled="">Select Genre</option>
+                                        <select data-url="/genre" name="genre" id="genre">
+                                            <option value="0">Select Genre</option>
                                             @foreach($genres as $genre)
                                             <option value="{{ $genre['mal_id'] }}">{{ $genre['name'] }}</option>
                                             @endforeach
@@ -100,6 +100,11 @@
         });
 
         $("#genre").change(function(){
+
+            if (this.val()==0) {
+              document.location.href="/genre"
+            }
+
             var id = $(this).val()
             
             $.ajax({
