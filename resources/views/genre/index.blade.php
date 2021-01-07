@@ -114,7 +114,7 @@
                   
                   setTimeout(function(){
                     $("#overlay").fadeOut(500);
-                  },500);
+                  },300);
 
                     $("#genre-title").html("Genre : "+response.mal_url.name)
                     var anime = response.anime
