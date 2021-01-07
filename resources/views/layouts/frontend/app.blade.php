@@ -21,13 +21,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@icon/elegant-icons@0.0.1-alpha.4/elegant-icons.css">
 
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/elegant-icons.css" type="text/css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" integrity="sha512-uHuCigcmv3ByTqBQQEwngXWk7E/NaPYP+CFglpkXPnRQbSubJmEENgh+itRDYbWV0fUZmUz7fD/+JDdeQFD5+A==" crossorigin="anonymous" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" integrity="sha512-heyoieAHmpAL3BdaQMsbIOhVvGb4+pl4aGCZqWzX/f1BChRArrBy/XUZDHW9WVi5p6pf92pX4yjkfmdaIYa2QQ==" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="{{ asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ secure_asset('templates/frontend/anime-main') }}/css/style.css" type="text/css">
     @yield('css-script')
 </head>
 
@@ -44,7 +44,7 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="/">
-                            <img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
+                            <img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="/"><img src="{{ asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
+                    <a href="/"><img src="{{ secure_asset('templates/frontend/anime-main') }}/img/logo.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -139,7 +139,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" integrity="sha512-AmJ0T6lpw/ZQtCleMyfbraDy8AGQ9tWaB/PmRkXdKxH9Kvo0oTuW6+2hTEQ89mHkFIO/LpColEe3+QE+FJtgIg==" crossorigin="anonymous"></script>
 
-<script src="{{ asset('templates/frontend/anime-main') }}/js/main.js"></script>
+<script src="{{ secure_asset('templates/frontend/anime-main') }}/js/main.js"></script>
 @yield('js-plugins')
 @yield('js-script')
 
