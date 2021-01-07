@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
-                    <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                    <a href="./categories.html">Categories</a>
-                    <a href="#">Romance</a>
-                    <span>Fate Stay Night: Unlimited Blade</span>
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                    <a href="javascript:void(0)">Streaming</a>
+                    <a href="javascript:void(0)">{{ $anime['title'] }}</a>
+                    <span>Eps {{ $animeChoosed['episode_id'] }}</span>
                 </div>
             </div>
         </div>
@@ -26,17 +26,15 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="anime__video__player">
-                    <video id="player" playsinline controls data-poster="{{ asset('templates/frontend/anime-main') }}/videos/anime-watch.jpg">
-                        <source src="{{ asset('templates/frontend/anime-main') }}/videos/1.mp4" type="video/mp4" />
-                        <!-- Captions are optional -->
-                        <track kind="captions" label="English captions" src="#" srclang="en" default />
-                    </video>
+                    <iframe src="{{ $anime_link_src }}" width="100%" height="500" allowfullscreen allow="encrypted-media"> 
+                    </iframe>
                 </div>
                 <div class="anime__details__episodes">
                     <div class="section-title">
-                        <h5>List Name</h5>
+                        <h5>Menu</h5>
                     </div>
-                    <a href="#">Ep 01</a>
+                    <a href="/streaming/anime/{{ encrypt($anime['mal_id']) }}">Kembali</a>
+                    <!-- <a href="#">Ep 01</a>
                     <a href="#">Ep 02</a>
                     <a href="#">Ep 03</a>
                     <a href="#">Ep 04</a>
@@ -54,11 +52,11 @@
                     <a href="#">Ep 16</a>
                     <a href="#">Ep 17</a>
                     <a href="#">Ep 18</a>
-                    <a href="#">Ep 19</a>
+                    <a href="#">Ep 19</a> -->
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-8">
                 <div class="anime__details__review">
                     <div class="section-title">
@@ -131,7 +129,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <!-- Anime Section End -->

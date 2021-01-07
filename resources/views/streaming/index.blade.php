@@ -1,5 +1,5 @@
 @extends('layouts.frontend.app',[
-    'title' => 'Anime Watching'
+'title' => 'Anime Streaming'
 ])
 @section('content')
 
@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__links">
-                    <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                    <a href="./categories.html">Categories</a>
-                    <a href="#">Romance</a>
-                    <span>Fate Stay Night: Unlimited Blade</span>
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                    <a href="javascript:void(0)">Anime</a>
+                    <a href="javascript:void(0)">Streaming</a>
+                    <span>{{ $anime['title'] }}</span>
                 </div>
             </div>
         </div>
@@ -25,40 +25,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="anime__video__player">
-                    <video id="player" playsinline controls data-poster="{{ asset('templates/frontend/anime-main') }}/videos/anime-watch.jpg">
-                        <source src="{{ asset('templates/frontend/anime-main') }}/videos/1.mp4" type="video/mp4" />
-                        <!-- Captions are optional -->
-                        <track kind="captions" label="English captions" src="#" srclang="en" default />
-                    </video>
-                </div>
                 <div class="anime__details__episodes">
-                    <div class="section-title">
-                        <h5>List Name</h5>
-                    </div>
-                    <a href="#">Ep 01</a>
-                    <a href="#">Ep 02</a>
-                    <a href="#">Ep 03</a>
-                    <a href="#">Ep 04</a>
-                    <a href="#">Ep 05</a>
-                    <a href="#">Ep 06</a>
-                    <a href="#">Ep 07</a>
-                    <a href="#">Ep 08</a>
-                    <a href="#">Ep 09</a>
-                    <a href="#">Ep 10</a>
-                    <a href="#">Ep 11</a>
-                    <a href="#">Ep 12</a>
-                    <a href="#">Ep 13</a>
-                    <a href="#">Ep 14</a>
-                    <a href="#">Ep 15</a>
-                    <a href="#">Ep 16</a>
-                    <a href="#">Ep 17</a>
-                    <a href="#">Ep 18</a>
-                    <a href="#">Ep 19</a>
+                    @include('streaming.episodes')
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-8">
                 <div class="anime__details__review">
                     <div class="section-title">
@@ -131,7 +103,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <!-- Anime Section End -->

@@ -69,8 +69,9 @@
                     </div>
                     
                     <div class="anime__details__btn">
-                    <a href="/characters/anime/{{ encrypt($anime['mal_id']) }}" class="watch-btn"><span>Caracter & Staff </span> <i
-                        class="fa fa-angle-right"></i></a>
+                    <a href="/characters/anime/{{ encrypt($anime['mal_id']) }}" class="follow-btn"><i class="fa fa-user-tie"></i> Caracter & Staff</a>
+        
+                    <a href="/streaming/anime/{{ encrypt($anime['mal_id']) }}" class="watch-btn"><span> Watch Now</span> <i class="fa fa-angle-right"></i></a>
                     </div>
                     </div>
                 </div>
