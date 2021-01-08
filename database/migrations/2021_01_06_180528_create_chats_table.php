@@ -15,7 +15,10 @@ class CreateChatsTable extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name')->nullable();
+            $table->text('comment')
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIME'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIME'));
         });
     }
 

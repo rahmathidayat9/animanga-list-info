@@ -10,12 +10,19 @@ use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\DomCrawler\Crawler;
 
 class StreamingController extends Controller
-{
+{   
+    protected $api;
+
+    public function __construct()
+    {       
+        $this->api = "https://api.jikan.moe/v3/";
+    }
+
     public function index($id)
     {
-    	$episodes = Http::get("https://api.jikan.moe/v3/anime/".decrypt($id)."/episodes");
+    	$episodes = Http::get($this->api."anime/".decrypt($id)."/episodes");
 
-    	$anime = Http::get("https://api.jikan.moe/v3/anime/".decrypt($id));
+    	$anime = Http::get($this->api."anime/".decrypt($id));
     	
     	// return $anime['episodes'][0];
     	
@@ -27,14 +34,19 @@ class StreamingController extends Controller
 
     public function show($anime_id,$startAnimeArray)
     {
-    	$anime = Http::get("https://api.jikan.moe/v3/anime/".decrypt($anime_id));
+    	$anime = Http::get($this->api."anime/".decrypt($anime_id));
 
-    	$animeEpisode = Http::get("https://api.jikan.moe/v3/anime/".decrypt($anime_id)."/episodes");
+    	$animeEpisode = Http::get($this->api."anime/".decrypt($anime_id)."/episodes");
     	$animeChoosed = $animeEpisode['episodes'][$startAnimeArray];
         $url = $animeChoosed['video_url'];
 
+        if (is_null($url)) {
+            abort(404);        
+        }
+
         $client = new Client(HttpClient::create(['timeout' => 60]));
         $crawler = $client->request('GET', $url);
+
         $link = $crawler->filter('iframe')->eq(0)->attr('src');
 
     	return view('streaming.watch',[

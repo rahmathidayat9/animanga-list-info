@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\MangaController;
@@ -48,7 +49,7 @@ Route::view('/blog/details','blog.blog-details');
 Route::view('/login','auth.login');
 Route::view('/register','auth.register');
 
-Route::view('/group-chat','home.group-chat');
+Route::get('/group-chat',[ChatController::class,'index']);
 
 Route::view('login','auth.login')->name('login');
 
