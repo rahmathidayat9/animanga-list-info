@@ -10,5 +10,6 @@ Simple Anime Info List adalah situs unofficial myanimelist , menggunakan api dar
 - Detail Anime + Trailer
 - Charater & Staff List Info
 - Select Genre 
+- Streaming + Episode Select
 
 Aplikasi web ini menggunakan Framework Laravel 8.
